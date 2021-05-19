@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  app:
+    container_name: glowing-bear
+    image: glowing-bear
+    build: .
+    ports:
+      - 8000:80/tcp
+    network_mode: bridge
+    restart: unless-stopped
